@@ -8,9 +8,9 @@ const goTopButton = document.querySelector('#goTopButton');
 const dropbutton = document.querySelector('#dropbutton');
 const body = document.querySelector('body');
 const dropDown = document.querySelectorAll('.nav-drop');
-const list = document.querySelectorAll('.dropdown')
+const list = document.querySelectorAll('.dropdown');
 var dataRev;
-var dataNews
+var dataNews;
 function readTextFile(file, callback) {
   var rawFile = new XMLHttpRequest();
   rawFile.overrideMimeType("application/json");
@@ -19,7 +19,7 @@ function readTextFile(file, callback) {
     if (rawFile.readyState === 4 && rawFile.status == "200") {
       callback(rawFile.responseText);
     }
-  }
+  };
   rawFile.send(null);
 }
 dropbutton.addEventListener('click',changeImage);
@@ -74,14 +74,14 @@ $('.image-link').magnificPopup({
   }
 });
 openSearchBtn.addEventListener('click', openInput);
-closeButton.addEventListener('click', closeInput)
+closeButton.addEventListener('click', closeInput);
 document.addEventListener('click', removeClass);
 for (let i of dropDown) {
   i.addEventListener('click', setArrow);
 }
 
 function setArrow() {
-  this.parentNode.classList.toggle('shevron-bot')
+  this.parentNode.classList.toggle('shevron-bot');
 }
 function removeClass(e) {
   for (let i of list) {
@@ -95,10 +95,10 @@ function changeImage (){
 }
 
 function openInput() {
-  inputWrap.classList.add('open-input')
+  inputWrap.classList.add('open-input');
 }
 function closeInput() {
-  inputWrap.classList.remove('open-input')
+  inputWrap.classList.remove('open-input');
 }
 window.addEventListener('scroll', checkScroll);
 function checkScroll() {
@@ -137,7 +137,7 @@ function drawRev(block, fromFile) {
                           </div>
                         </div>
                       </div>
-                    </div>`
+                    </div>`;
     block.innerHTML += revItem;
   }
 }
@@ -152,7 +152,7 @@ function drawNews(block, fromFile) {
                     <span class="news-date">${fromFile[i].date}</span>
                     <p class="news-text">${fromFile[i].text}</p>
                   </div>
-                </div>`
+                </div>`;
     block.innerHTML += revItem;
   }
 }
