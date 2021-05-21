@@ -259,6 +259,9 @@ a:hover {
 .dropdown {
   cursor: pointer;
 }
+.no-button::before {
+  content: "";
+}
 .dropdown-item { 
   text-decoration: none;
   padding: 10px 25px;
@@ -351,8 +354,7 @@ a:hover {
 .carousel-indicators .active {
   background: transparent;
   border: 2px gray solid;
-  width: 12px;
-  height: 12px;
+  transform: scale(1.8);
 }
 .button-slider {
   margin: auto 0;
@@ -806,6 +808,9 @@ a:hover {
 
 
 @media screen and (max-width: 768px) {
+  .main-title {
+    text-align: center;
+  }
   .footer-mobile {
     display: flex;
     flex-direction: column;

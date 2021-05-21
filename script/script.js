@@ -87,7 +87,6 @@ function removeClass(e) {
   for (let i of list) {
     i.classList.remove('shevron-bot');
   }
-  console.log(e.type);
 }
 function changeImage (){
   dropbutton.classList.toggle("drop-button-arrow");
